@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avani, Will You Marry Me? 💍 • A Birthday Universe for Avani</title>
+  <meta name="description" content="A magical birthday celebration and heartfelt proposal created by Mani for Avani. Celebrating 24 March 2024 and every tomorrow to come.">
+  
+  <!-- Romantic Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Great+Vibes&family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Floating Audio & Ambient Controls -->
+  <div class="audio-toggle-container" id="audio-toggle-container">
+    <button class="audio-toggle-btn" id="audio-toggle" aria-label="Toggle Romantic Music & Celebration Sound">
+      <span class="audio-icon">🎵</span>
+      <span class="audio-text">Romantic Melody: <strong id="audio-status">OFF</strong></span>
+    </button>
+  </div>
+
+  <!-- SECTION 1: BIRTHDAY EXPERIENCE & CAKE -->
+  <header class="birthday-hero" id="birthday-hero">
+    <div class="stars-backdrop" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="hero-eyebrow">✨ 26 October • Happy Birthday My Love ✨</span>
+      <h1 class="hero-title">Happy Birthday, <em>Avani</em></h1>
+      <p class="hero-subtitle">To the most enchanting soul, the girl whose smile lights up my entire world.</p>
+      
+      <!-- Interactive 3D Birthday Cake -->
+      <div class="cake-container" id="cake-interactive">
+        <div class="cake-plate">
+          <div class="cake-layer layer-bottom"></div>
+          <div class="cake-layer layer-middle"></div>
+          <div class="cake-layer layer-top">
+            <div class="frosting-drips"></div>
+            <div class="candle" id="birthday-candle">
+              <div class="candle-wick"></div>
+              <div class="candle-flame" id="flame"></div>
+            </div>
+          </div>
+        </div>
+        <div class="cake-prompt">
+          <button class="btn-wish" id="btn-make-wish">Make a Wish &amp; Blow the Candle 🎂✨</button>
+          <p class="wish-status" id="wish-status">Click above to blow out the candle and make your secret wish!</p>
+        </div>
+      </div>
+
+      <a href="#memories-album" class="scroll-down-indicator" aria-label="Scroll to memories">
+        <span>Our Memories</span>
+        <span class="arrow-down">↓</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- SECTION 2: MEMORIES ALBUM WITH ACCORDION GALLERY -->
+  <section class="memories-section" id="memories-album" aria-label="Our Photo Memories">
+    <div class="section-header">
+      <p class="section-tag">♥ Chapter of Us ♥</p>
+      <h2 class="section-heading">Our Little Forever <em>In Pictures</em></h2>
+      <p class="section-desc">Every smile, every glance, and every heartbeat we've shared since 24 March 2024.</p>
+    </div>
+
+    <!-- React Bits AccordionGallery Integrated Component -->
+    <div class="album-container">
+      <div id="accordion-gallery-root" class="accordion-gallery" role="list" aria-label="Image accordion gallery of Avani and Mani">
+        <!-- Rendered by script.js using our 5 cropped photos -->
+      </div>
+      <p class="gallery-hint">✦ Tap or hover over any panel to unfold the memory ✦</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3: AVANI RUNS TO MANI ❤️ — MINI 3D CHIBI COUPLE ANIMATION -->
+  <section class="reunion" id="reunion" aria-label="Avani runs to Mani">
+    <div class="reunion__sticky">
+      <p class="reunion__eyebrow">♥ &nbsp; A little moment for us</p>
+      <h2 class="reunion__title">Every road leads <em>back to you.</em></h2>
+      <p class="reunion__intro">Somewhere between a thousand miles and one heartbeat, there you are.</p>
+      
+      <div class="chibi-stage-wrap" id="chibi-stage" aria-label="Chibi Avani in teal kurta runs to Mani in cream shirt and glasses">
+        <div class="stage-backdrop">
+          <div class="reunion__moon"></div>
+          <div class="reunion__sparkles">✦　·　✧　·　✦</div>
+          <div class="reunion__ground"></div>
+        </div>
+
+        <!-- 3D Chibi Sprites Layer -->
+        <div class="chibi-track" id="chibi-track">
+          <!-- Avani Chibi -->
+          <div class="chibi-character chibi-avani" id="sprite-avani">
+            <img src="assets/chibi_avani_standing.png" alt="Chibi Avani with long wavy hair, teal kurta and gold earrings" class="sprite-img sprite-avani-stand active" id="img-avani-stand">
+            <img src="assets/chibi_avani_running.png" alt="Chibi Avani running with joy" class="sprite-img sprite-avani-run" id="img-avani-run">
+          </div>
+
+          <!-- Mani Chibi -->
+          <div class="chibi-character chibi-mani" id="sprite-mani">
+            <img src="assets/chibi_mani_standing.png" alt="Chibi Mani with curly hair, glasses, cream shirt" class="sprite-img sprite-mani-stand active" id="img-mani-stand">
+            <img src="assets/chibi_mani_waiting.png" alt="Chibi Mani with open arms waiting to embrace Avani" class="sprite-img sprite-mani-open" id="img-mani-open">
+          </div>
+
+          <!-- Unified Hug Sprite (Moments 3 & 4) -->
+          <div class="chibi-character chibi-hug" id="sprite-hug">
+            <img src="assets/chibi_moment_3_embrace.png" alt="Avani and Mani embracing" class="sprite-img sprite-hug-reach" id="img-hug-reach">
+            <img src="assets/chibi_moment_4_hug_tight.png" alt="Avani and Mani in sweet warm hug" class="sprite-img sprite-hug-tight" id="img-hug-tight">
+          </div>
+        </div>
+
+        <!-- Floating hearts & petals container -->
+        <div id="heart-petals" class="heart-petals" aria-hidden="true"></div>
+      </div>
+
+      <p class="stage-caption" id="stage-caption" aria-live="polite">Two little hearts, always finding their way home.</p>
+      <div class="stage-actions">
+        <button class="btn-replay-run" id="btn-trigger-run">Run to Mani's Arms Again 💕</button>
+      </div>
+
+      <div class="reunion-note">
+        <p class="note-eyebrow">A little note from Mani</p>
+        <blockquote>"No matter how far apart we are, my favourite place will always be in your arms, Avani."</blockquote>
+        <p class="note-sign">— Mani ❤️</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MANI'S FINAL LOVE LETTER -->
+  <section class="love-letter-section" id="love-letter-section">
+    <div class="letter-card">
+      <div class="wax-seal">♥</div>
+      <p class="letter-date">26 October 2026</p>
+      <h3 class="letter-salutation">My Dearest Avani,</h3>
+      <div class="letter-body">
+        <p>From the moment you entered my world on 24 March 2024, every sunrise felt brighter and every little moment gained meaning. Your gentle laughter, the kindness in your eyes, and the way you make even the ordinary feel extraordinary—you have stolen my heart completely.</p>
+        <p>I built this little universe for your birthday, hoping to bring a smile to your face. But beyond today's celebration, my thoughts keep drifting toward all our tomorrows.</p>
+        <p>There is one final secret I have kept hidden just for this moment...</p>
+      </div>
+      <div class="letter-footer">
+        <p class="letter-sign">With all my love,</p>
+        <p class="letter-author">Your Mani ❤️</p>
+      </div>
+      <div class="letter-action">
+        <button id="open-proposal" class="btn-reveal-secret">Open the Final Secret Scene&nbsp; 💍✨</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: FINAL SECRET SCENE — "AVANI, WILL YOU MARRY ME?" 💍 -->
+  <div id="proposal-scene" class="proposal-scene hidden" hidden>
+    <!-- Romantic Night Sky Background -->
+    <div class="sky-wrap">
+      <canvas id="stars-canvas" class="stars-canvas"></canvas>
+      <div class="moon-wrap">
+        <div class="full-moon"></div>
+        <div class="moon-cloud cloud-1"></div>
+        <div class="moon-cloud cloud-2"></div>
+      </div>
+    </div>
+
+    <!-- Rose Petals & Sparkling Particles Canvas -->
+    <canvas id="petals-canvas" class="petals-canvas"></canvas>
+
+    <!-- Warm Golden Fairy Lights Garland -->
+    <div class="fairy-lights-garland" id="fairy-lights"></div>
+
+    <!-- Deep Red Roses in Corners -->
+    <div class="rose-corner-decor corner-tl" aria-hidden="true"></div>
+    <div class="rose-corner-decor corner-tr" aria-hidden="true"></div>
+    <div class="rose-corner-decor corner-bl" aria-hidden="true"></div>
+    <div class="rose-corner-decor corner-br" aria-hidden="true"></div>
+
+    <!-- Glowing Glass-like Heart in the Background -->
+    <div class="glass-heart-bg" aria-hidden="true"></div>
+
+    <!-- Spotlight Beam -->
+    <div class="cinematic-spotlight" aria-hidden="true"></div>
+
+    <!-- 3D Velvet Ring Box on Pedestal -->
+    <div class="ring-box-pedestal" id="ring-pedestal">
+      <div class="pedestal-glow"></div>
+      <div class="velvet-ring-box" id="ring-box">
+        <!-- Box Base -->
+        <div class="box-base">
+          <div class="box-interior-cushion">
+            <!-- Golden Ring with Realistic Sparkle -->
+            <div class="gold-ring" id="gold-ring">
+              <div class="ring-band"></div>
+              <div class="ring-gem">
+                <span class="gem-sparkle sparkle-1">✦</span>
+                <span class="gem-sparkle sparkle-2">✦</span>
+                <span class="gem-glint"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Box Lid that smoothly hinges open -->
+        <div class="box-lid" id="box-lid">
+          <div class="lid-inside">
+            <span class="gold-monogram">A &amp; M</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paced Proposal Text Container -->
+    <div class="proposal-narrative" id="proposal-narrative">
+      <p class="narrative-line line-1" id="prop-line-1">"Avani..."</p>
+      <p class="narrative-line line-2" id="prop-line-2">"From the day our story began on 24 March 2024, you've become such a beautiful part of my life."</p>
+      <p class="narrative-line line-3" id="prop-line-3">"You're the girl I fell in love with, the girl I still love like the very first time, and the girl I dream of sharing my future with."</p>
+      <p class="narrative-line line-4" id="prop-line-4">"I want to keep making memories with you, holding your hand through life's ups and downs, celebrating your happiness, and choosing you through every chapter that comes our way."</p>
+    </div>
+
+    <!-- Main Question in Large Golden Lettering -->
+    <div class="main-question-block" id="main-question-block">
+      <h2 class="proposal-gold-heading" id="proposal-heading">AVANI, WILL YOU MARRY ME SOMEDAY? 💍❤️</h2>
+      <p class="proposal-signature">— With all my love, your Mani.</p>
+    </div>
+
+    <!-- The Two Answer Buttons -->
+    <div class="proposal-buttons-wrap" id="proposal-buttons-wrap">
+      <button class="btn-answer btn-yes" id="btn-answer-yes">
+        <span class="btn-text">YES! 💖</span>
+        <span class="btn-subtext">With all my heart</span>
+        <span class="btn-particles"></span>
+      </button>
+
+      <button class="btn-answer btn-absolutely" id="btn-answer-absolutely">
+        <span class="btn-text">ABSOLUTELY YES!! 💍❤️</span>
+        <span class="btn-subtext">In this lifetime &amp; every other</span>
+        <span class="btn-particles"></span>
+      </button>
+    </div>
+
+    <!-- Celebration Fireworks Canvas -->
+    <canvas id="fireworks-canvas" class="fireworks-canvas"></canvas>
+
+    <!-- CELEBRATION REVEAL 1: When she chooses "YES!" -->
+    <div class="celebration-container hidden" id="celebration-yes">
+      <div class="celebration-badge">SHE SAID YES! 💖</div>
+      <div class="couple-photo-heart-frame">
+        <img src="assets/couple_1_cherish.jpg" alt="Avani and Mani together" class="celebration-photo">
+      </div>
+      <div class="celebration-message">
+        <p class="lead-msg">"Avani, you have no idea how happy that little YES makes my heart. ❤️"</p>
+        <p>"One day, I hope I get to stand in front of you, hold your hands, look into your eyes, and ask you this question for real."</p>
+        <p>"Until that day comes, this little universe will always be here to remind you that you are loved, cherished, and part of the future I dream about."</p>
+        <p class="forever-sign">Forever yours,<br><strong>Your Mani ❤️</strong></p>
+      </div>
+      <button class="btn-continue-forever" id="btn-continue-forever-1">Enter Our Forever Screen ✦</button>
+    </div>
+
+    <!-- CELEBRATION REVEAL 2: When she chooses "ABSOLUTELY YES!!" -->
+    <div class="celebration-container hidden" id="celebration-absolutely">
+      <div class="celebration-badge grand">FOREVER &amp; ALWAYS 💍❤️</div>
+      <div class="couple-photo-heart-frame grand-frame">
+        <img src="assets/couple_4_foliage.jpg" alt="Avani and Mani smiling together" class="celebration-photo">
+      </div>
+      <div class="celebration-message">
+        <p class="lead-msg">"ABSOLUTELY YES?! AVANI, YOU'VE JUST MADE YOUR MANI THE HAPPIEST BOY ALIVE! 😭❤️"</p>
+        <p>"If I could choose a thousand times, I would still hope to find you in every single lifetime."</p>
+        <p>"One day, I hope to turn this little digital proposal into a real moment — holding your hands, looking into your eyes, and asking you to build a life with me."</p>
+        <p>"Until then, here's my little promise: I want to keep choosing you, learning with you, growing with you, and loving you better with every passing day."</p>
+        <p class="forever-sign">Your Mani. Today, tomorrow, and in every beautiful chapter that may come after. 💍❤️</p>
+      </div>
+      <button class="btn-continue-forever" id="btn-continue-forever-2">Enter Our Forever Screen ✦</button>
+    </div>
+
+    <!-- THE FINAL FOREVER SCREEN -->
+    <div class="final-screen hidden" id="final-screen">
+      <div class="final-screen-inner">
+        <span class="final-infinity">♾️</span>
+        <h2 class="final-title">AVANI × MANI</h2>
+        <p class="final-subtitle">"OUR LITTLE FOREVER"</p>
+        
+        <div class="timeline-pills">
+          <span class="pill"><strong>24.03.2024</strong> — Where our story began.</span>
+          <span class="pill"><strong>26.10</strong> — The birthday of the girl I hope to marry someday.</span>
+        </div>
+
+        <div class="heart-portrait-container">
+          <div class="delicate-heart-frame">
+            <svg class="heart-svg-border" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 88C50 88 15 62 15 36C15 22 26 12 40 12C46 12 50 16 50 16C50 16 54 12 60 12C74 12 85 22 85 36C85 62 50 88 50 88Z" stroke="url(#goldGrad)" stroke-width="2.5" filter="drop-shadow(0 0 10px rgba(255,215,0,0.7))"/>
+              <defs>
+                <linearGradient id="goldGrad" x1="0" y1="0" x2="100" y2="100" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#fff0df"/>
+                  <stop offset="0.5" stop-color="#ffd700"/>
+                  <stop offset="1" stop-color="#e2a03f"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="heart-clipped-img">
+              <img src="assets/couple_4_foliage.jpg" alt="Avani and Mani sweet portrait" id="final-couple-img">
+            </div>
+          </div>
+        </div>
+
+        <p class="stored-choice-indicator" id="stored-choice-text">You answered: <strong id="answer-display">YES! 💖</strong></p>
+
+        <div class="final-action-buttons">
+          <button class="final-btn btn-memories-nav" id="btn-revisit-memories">
+            <span>📷</span> Revisit Our Memories
+          </button>
+          <button class="final-btn btn-replay-proposal-nav" id="btn-replay-proposal">
+            <span>💍</span> Replay The Proposal
+          </button>
+          <button class="final-btn btn-replay-birthday-nav" id="btn-replay-birthday">
+            <span>🎂</span> Replay Birthday Experience
+          </button>
+          <button class="final-btn btn-change-answer-nav" id="btn-change-answer">
+            <span>↺</span> Change My Answer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP Animation Library -->
+  <script src="gsap.min.js"></script>
+  <!-- Application Script -->
+  <script src="script.js"></script>
+</body>
+</html>
